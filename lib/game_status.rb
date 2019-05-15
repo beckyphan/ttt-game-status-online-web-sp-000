@@ -29,15 +29,14 @@ def won?(board)
       player_indices.push(index)
     end
   end
-  
+
   WIN_COMBINATIONS.detect do |winning_combo|
     winning_combo == player_indices
-    return winning_combo
   end
 
   if winning_combo == player_indices
     return player_indices
   else
     return false
-  end 
+  end
 end
