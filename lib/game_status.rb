@@ -30,7 +30,10 @@ def won?(board)
     end
   end
 
-  WIN_COMBINATIONS.select do |winning_combo|
-    winning_combo == player_indices
+  WIN_COMBINATIONS.each do |winning_combo|
+    if winning_combo == player_indices
+      return player_indices
+    else
+      return false
   end
 end
