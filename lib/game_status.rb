@@ -33,4 +33,10 @@ def won?(board)
   WIN_COMBINATIONS.detect do |winning_combo|
     winning_combo == player_indices
   end
+
+  if winning_combo == player_indices
+    return player_indices
+  else
+    return false
+  end 
 end
