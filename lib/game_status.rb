@@ -31,6 +31,6 @@ def won?(board)
   end
 
   WIN_COMBINATIONS.detect do |winning_combo|
-    winning_combo === player_indices
+    winning_combo == player_indices
   end
 end
