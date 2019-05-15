@@ -1,5 +1,3 @@
-require_relative '../lib/game_status.rb'
-
 # Helper Method
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
@@ -21,7 +19,7 @@ WIN_COMBINATIONS = [
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
-  [2, 4, 6]  
+  [2, 4, 6]
 ]
 
 def won?(board) {
@@ -35,8 +33,8 @@ def won?(board) {
   WIN_COMBINATIONS.select do |winning_combo|
     if player_indices == winning_combo
       return player_indices
-    else 
+    else
       return false
-    end 
+    end
   end
 }
