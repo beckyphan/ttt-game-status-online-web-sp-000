@@ -22,18 +22,19 @@ WIN_COMBINATIONS = [
   [2, 4, 6]
 ]
 
-player_indices = []
-
-def player_pos(board)
-  board.each do |index|
-    if index == "X"
-      player_indices.push(index)
-    end
-  end
-  return player_indices
-end
 
 def won?(board)
+  player_indices = []
+
+  def player_pos(board)
+    board.each do |index|
+      if index == "X"
+        player_indices.push(index)
+      end
+    end
+    return player_indices
+  end
+  
   WIN_COMBINATIONS.each do |winning_combo|
     if winning_combo == player_pos(board)
       return player_pos(board)
