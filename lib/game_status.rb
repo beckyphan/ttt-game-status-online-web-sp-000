@@ -21,3 +21,20 @@ WIN_COMBINATIONS = [
   [0, 4, 8],
   [2, 4, 6]  
 ]
+
+def won?(board) {
+  player_indices = []
+  board.each do |index|
+    if index == "X"
+      player_indices.push(index)
+    end
+  end
+
+  WIN_COMBINATIONS.select do |winning_combo|
+    if player_indices == winning_combo
+      return player_indices
+    else 
+      return false
+    end 
+  end
+}
