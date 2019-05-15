@@ -26,18 +26,17 @@ WIN_COMBINATIONS = [
 def won?(board)
   player_indices = []
 
-  def player_pos(board)
-    board.each do |index|
-      if index == "X"
-        player_indices.push(index)
-      end
+  index = 0
+  while index < 9
+    if board[index] == "X"
+      player_indices.push(index)
     end
-    return player_indices
+    index += 1
   end
   
   WIN_COMBINATIONS.each do |winning_combo|
-    if winning_combo == player_pos(board)
-      return player_pos(board)
+    if winning_combo == player_indices
+      return player_indices
     else
       false
     end
