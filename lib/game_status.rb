@@ -22,7 +22,7 @@ WIN_COMBINATIONS = [
   [2, 4, 6]
 ]
 
-def won?(board) {
+def won?(board)
   player_indices = []
   board.each do |index|
     if index == "X"
@@ -37,4 +37,4 @@ def won?(board) {
       return false
     end
   end
-}
+end
