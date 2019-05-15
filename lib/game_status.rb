@@ -22,8 +22,9 @@ WIN_COMBINATIONS = [
   [2, 4, 6]
 ]
 
+player_indices = []
+  
 def player_pos(board)
-  player_indices = []
   board.each do |index|
     if index == "X"
       player_indices.push(index)
