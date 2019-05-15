@@ -35,7 +35,7 @@ def won?(board)
       index += 1
     end
   end
-  
+
   WIN_COMBINATIONS.each do |winning_combo|
     if winning_combo == player_indices
       return player_indices
