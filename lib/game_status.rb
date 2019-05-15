@@ -1,3 +1,5 @@
+require_relative '../lib/game_status.rb'
+
 # Helper Method
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
