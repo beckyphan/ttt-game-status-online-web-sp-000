@@ -30,7 +30,7 @@ def won?(board)
     end
   end
 
-  WIN_COMBINATIONS.select do |winning_combo|
+  WIN_COMBINATIONS.detect do |winning_combo|
     winning_combo == player_indices
   end
 end
