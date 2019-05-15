@@ -37,5 +37,6 @@ def won?(board)
       won = player_indices
     else
       return won
+    end 
   end
 end
