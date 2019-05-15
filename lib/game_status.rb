@@ -30,8 +30,10 @@ def won?(board)
   while index < 9
     if board[index] == "X"
       player_indices.push(index)
+      index += 1
+    else
+      index += 1
     end
-    index += 1
   end
   
   WIN_COMBINATIONS.each do |winning_combo|
